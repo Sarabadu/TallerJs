@@ -52,7 +52,7 @@ function obtenerMovimiento(mov){
 
 
 
-impUltimoMovimiento  = obtenerCliente(0)
+impUltimoMovimiento  = obtenerCliente(11)
 .then(
     function (data) {
         console.log("Data1:", data)
@@ -73,11 +73,13 @@ impUltimoMovimiento  = obtenerCliente(0)
     })
 .catch(function catched(err) {
     console.log("catch",err)
-    return 1
+    throw err
 })
 
 
 impUltimoMovimiento.then(function (importe) {
     console.log("importe: " , importe)
+}).catch(function(err){
+    console.log("error final" ,err)
 })
 

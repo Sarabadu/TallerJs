@@ -18,3 +18,11 @@ urlErr = "https://aaaajsonplaceholder.typicode.com/posts"
  * 
  * codear debajo de este comentario
  *  */
+
+ function pepito(errorPepito,DatosPepito){
+     if(errorPepito){
+         console.log("Error Pepito Erroor", errorPepito)
+     }
+     console.log("Bien Pepito ", DatosPepito)
+ }
+     ajax(url,pepito)

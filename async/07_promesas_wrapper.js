@@ -19,8 +19,9 @@ function obtenerCliente(id){
     })
 }
 
-prom  = obtenerCliente(1)
-.then(
+prom  = obtenerCliente(1);
+
+prom.then(
     function (data) {
         console.log("Data1:", data)
     },
@@ -40,4 +41,11 @@ setTimeout(() => {
 
 setTimeout(() => {
     prom.then(a=>console.log("la promesa termino hace rato",a))
+
+    prom.then(function(lalala){
+        console.log ("flallalalal",lalala)
+    })
+
 }, 600);
+
+

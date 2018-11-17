@@ -27,7 +27,7 @@ function error(err) {
 }
 
 console.log("1")
-teEspero(1, ok,error)
+teEspero(2, ok,error)
 console.log("2")
 
 

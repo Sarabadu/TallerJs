@@ -22,3 +22,16 @@ urlErr = "https://aaaajsonplaceholder.typicode.com/posts"
  * 
  * codear debajo de este comentario
  *  */
+
+
+function ok(res) {
+    console.log("Señor Sanchez",res)
+}
+
+function ko(err) {
+    console.log("Error en el pedido: ",err)
+}
+
+let p = ajax(url)
+
+p.then(ok,ko)

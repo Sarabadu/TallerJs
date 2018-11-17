@@ -5,15 +5,15 @@
 console.log("0")
 
 function teEspero(){
-    console.log("1")
+    console.log("2")
 
-    setTimeout(function() { console.log("2")}, 1000);
+    setTimeout(function() { console.log("4")}, 0);
    return;
 }
 
-console.log("3")
+console.log("1")
 teEspero()
-console.log("4")
+console.log("3")
 
 
 /**
