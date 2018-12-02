@@ -18,30 +18,3 @@ urlcoment = "https://jsonplaceholder.typicode.com/posts/3/comments"
  * 
  * codear debajo de este comentario
  *  */
-function procGetPost(err,data) {
-    if(err) {
-        console.log(err);
-        return;
-    }
-    // Recuperar el id del primer POST y consultar los comentarios.
-    console.log(data);
-   console.log(data[0].id)    
-    urlComment = "https://jsonplaceholder.typicode.com/posts/" + data[0].id + "/comments"
-    ajax(urlComment,getComent)
-}
-
-function getComent (err, data)
-{
-    if(err)
-    console.log("Error", err)
-    else
-    console.log(data)
-}
-
- function getPosts(numClien)  {
-     console.log("inicio" )
-    url = urlpost + numClien;
-    console.log(url)
-    ajax(url,procGetPost);
- } 
- getPosts(1);

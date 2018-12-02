@@ -1,6 +1,6 @@
 const request = require('request');
 
-function ajax(url,cb){
+function ajax(url){
     return new Promise(function (resolve,reject) {
         request(url,{ json: true },function (err,res,body) {
             if (err) {reject(err)}

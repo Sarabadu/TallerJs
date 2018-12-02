@@ -1,6 +1,6 @@
 const request = require('request');
 
-function ajax(url,cb){
+function ajax(url){
     return new Promise(function (resolve,reject) {
         request(url,{ json: true },function (err,res,body) {
             if (err) {reject(err)}
@@ -24,14 +24,3 @@ urlErr = "https://aaaajsonplaceholder.typicode.com/posts"
  *  */
 
 
-function ok(res) {
-    console.log("Señor Sanchez",res)
-}
-
-function ko(err) {
-    console.log("Error en el pedido: ",err)
-}
-
-let p = ajax(url)
-
-p.then(ok,ko)
