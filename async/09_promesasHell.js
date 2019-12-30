@@ -52,7 +52,7 @@ function obtenerMovimiento(mov){
 
 
 
-impUltimoMovimiento  = obtenerCliente(11)
+impUltimoMovimiento  = obtenerCliente(1)
 .then(
     function (data) {
         console.log("Data1:", data)
@@ -70,6 +70,9 @@ impUltimoMovimiento  = obtenerCliente(11)
     function (movimiento) {
         console.log("Data3:", movimiento)
         return movimiento.imp
+    },function (err){
+        console.log("fallo al buscar movimiento")
+        throw err
     })
 .catch(function catched(err) {
     console.log("catch",err)

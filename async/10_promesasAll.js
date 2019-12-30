@@ -22,9 +22,9 @@ Promise.all([
     esperar(5000,"2"),
     esperar(5,"3"),
     esperar(5000,"3"),
-]).then(function ([a,b,c]) {
+]).then(function ([a,b,c,d]) {
     console.log( "tardo " ,Date.now() - start)
-    console.log(a,b,c)
+    console.log(a,b,c,d)
 })
 
 

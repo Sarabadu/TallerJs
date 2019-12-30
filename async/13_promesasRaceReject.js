@@ -27,7 +27,7 @@ start = Date.now()
 console.log("Start",start)
 
 Promise.race([
-    esperar(1000,"1"),
+    esperar(100,"1"),
     esperar(5000,"2"),
     fallaren(200,"3"),
     esperar(5000,"4")

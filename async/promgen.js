@@ -51,7 +51,7 @@ function *gen(){
 }
 
 
-function lalala(gene){
+function async(gene){
     it = gene();
 
     function proximo (res){
@@ -67,6 +67,6 @@ function lalala(gene){
     return proximo(it.next())
 
 }
-lalala(gen).then(function(a){
+async(gen).then(function(a){
     console.log("termine",a)
 })

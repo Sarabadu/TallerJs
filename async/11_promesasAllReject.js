@@ -31,9 +31,9 @@ Promise.all([
     fallaren(300,"3"),
     esperar(5,"4"),
     esperar(5000,"5")
-]).then(function ([a,b,c]) {
+]).then(function ([a,b,c,d,e]) {
     console.log( "tardo " ,Date.now() - start)
-    console.log(a,b,c)
+    console.log(a,b,c,d,e)
 }).catch(function (error) {
     console.log("Fallo una promesa en ",Date.now() - start)
 })

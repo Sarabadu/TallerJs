@@ -46,6 +46,6 @@ setTimeout(() => {
         console.log ("flallalalal",lalala)
     })
 
-}, 600);
+}, 2000);
 
 
