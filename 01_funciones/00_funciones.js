@@ -89,8 +89,21 @@ retF()
 ret()()
 
 
-function opt({a:a,b:b,c:c="ss"}){
-    console.log(a,b,c)
-}
+/*-----------------------------------------------------------*/
+/**
+ * Funcion recursiva
+ * function a(){
+ *     a()
+ *     return ;
+ *  } 
+ */
 
-opt({a:"pepe" , b:"tito"})
+
+function countDown(number){
+    if (number <= 0) {
+        console.log("hey llegamos a 0")
+    } else {
+        console.log(number);
+        countDown(number - 1);
+    }
+}

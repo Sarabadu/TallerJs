@@ -6,7 +6,7 @@
 
 function teEspero(val,fn){
     if (val == 1){
-        setTimeout(fn("No me gusta el 1",null),0) // Ups!!! aca estamos dejandouna funcion syncronica cuando  hay errores exigimos reparacion
+        fn("No me gusta el 1",null) // Ups!!! aca estamos dejandouna funcion syncronica cuando  hay errores exigimos reparacion
         return;
     }
     setTimeout(()=>{

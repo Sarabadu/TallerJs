@@ -5,21 +5,17 @@
  */
 
 function Cliente(nombre,apellido,){
-    //let cliente = Object.create(creaCliente.prototype)
+    //let cliente = Object.create(Cliente.prototype)
     this.nombre=nombre;
     this.apellido=apellido;   
     this.longitudNombre=nombre.length;
 
 }
 
-function Nueva(){
-    this.farafal="fafafa"
-    console.log("Nueva...");
-}
+
 
 let nue = new Cliente("Pablito","pepito",Nueva);
-//nue.nueva()
-console.log(nue.farafal)
+
 
 Cliente.prototype.saludar =function saludar(){
     return "Hola soy " + this.nombre+ ", " + this.apellido ;

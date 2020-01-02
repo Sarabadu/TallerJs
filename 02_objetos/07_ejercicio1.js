@@ -18,16 +18,3 @@ Cliente.prototype.saludar =function saludar(){
  *  New(Cliente,["Juan","Garcia"])  == new Cliente("Juan","Garcia")
  * 
  * */ 
-
-function New(funcion, parametros) {
-    let objeto = Object.create(funcion.prototype);
-    // let f = funcion.bind(objeto)
-    //f(...parametros)
-    funcion.call(objeto, ...parametros); 
-    return objeto;
-}
-
-
-let clie = New(Cliente,["Juan","Garcia"])
-console.log(clie.saludar())
-console.log(clie.constructor)

@@ -1,7 +1,11 @@
+/* quien es this? */
+
 function diceHola(){
     console.log("Hola soy " + this.name)
 }
 
+
+//this.name = "pepe";
 
 let obj = {
     name:"juan",
@@ -10,7 +14,8 @@ let obj = {
 
 }
 
-//obj.habla()
+obj.habla()
+console.log(obj.apellido)
 
 let otro={
     name:"soy otro",
@@ -20,11 +25,14 @@ let otro={
 
 otro.queDigo = diceHola
 
-//otro.queDigo()
+otro.queDigo()
 
 
 otro.queDigo = diceHola.bind(this)
-//otro.queDigo = diceHola.bind({name:"lalala"})
+
+otro.queDigo = diceHola.bind({name:"lalala"})
+
+
 diceHola.call({name:"sy call"})
 
 
@@ -35,13 +43,9 @@ let x={
 }
 
 let arr = [1,2,3].map(x=>console.log(x))
+
 mapa = Array.prototype.map.bind(x)
+
 mapa(x=>console.log(x))
 
-//otro.queDigo()}
 
-function yaNoSe(){
-    console.log(arguments)
-}
-
-yaNoSe(1,"aa",3)

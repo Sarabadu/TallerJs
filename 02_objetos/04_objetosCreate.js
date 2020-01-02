@@ -21,6 +21,7 @@ function creaCliente(nombre,apellido){
     cliente.longitudNombre=nombre.length;
     return cliente;
 }
+/*
 creaCliente.metodos= {
     saludar :function saludar(){
         return "Hola soy " + this.nombre+ ", " + this.apellido ;
@@ -28,14 +29,17 @@ creaCliente.metodos= {
     despedir: function despedir(){
         return "Chau " + this.nombre+ ", " + this.apellido
     }
-}
+}*/
 
 let cliente = creaCliente("maxi", "meza")
 console.log(cliente.saludar(), cliente.longitudNombre)
+
 cliente = creaCliente("maxi1", "meza")
 console.log(cliente.despedir(), cliente.longitudNombre)
 
 cliente = creaCliente("maxi2", "meza")
 console.log(cliente.saludar(), cliente.longitudNombre)
+
+
 cliente = creaCliente("maxi3", "meza")
 console.log(cliente.saludar(), cliente.longitudNombre)
