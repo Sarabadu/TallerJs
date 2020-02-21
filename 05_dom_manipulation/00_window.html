@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <a></a>
+
+    <p id="parrafo">Lalalala <strong> lala</strong> </p>
+
+    <p id="parrafito">pepe</p>
+</body>
+<script>
+    const link = document.querySelector('a');
+
+    link.textContent = 'Mozilla Developer Network';
+
+    link.href = 'https://developer.mozilla.org';
+
+    let parrafo = document.getElementById('parrafo');
+    console.log(parrafo.innerHTML)
+
+    let negrita = parrafo.getElementsByTagName("strong");
+    console.log(negrita[0].innerText)
+
+
+    console.log('parrafito.innerText:', parrafito.innerText); // automatic id variable
+
+    console.log(document.querySelectorAll("p"));
+</script>
+
+</html>

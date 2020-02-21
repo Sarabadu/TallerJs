@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <section>
+        <a href="" class="boton"></a>
+        <a href="" class="boton"></a>
+        <a href="" class="boton"></a>
+        <a href="" class="boton"></a>
+    </section>
+</body>
+<script>
+    const sect = document.querySelector('section');
+
+    const para = document.createElement('p');
+
+    para.textContent = 'We hope you enjoyed the ride.';
+
+    sect.appendChild(para);
+
+    const text = document.createTextNode(' — the premier source for web development knowledge.');
+
+    const linkPara = document.querySelector('p');
+
+    linkPara.appendChild(text)
+
+    //mover elemento 
+    sect.appendChild(linkPara);
+
+
+    // borrar nodohighlight
+
+
+
+    //seleccionar por clase
+    for (element of document.getElementsByClassName("boton")) {
+        console.log(element)
+    }
+</script>
+
+</html>

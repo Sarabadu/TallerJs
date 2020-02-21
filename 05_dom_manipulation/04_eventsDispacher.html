@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .highlight {
+            color: white;
+            background-color: black;
+            padding: 10px;
+            width: 250px;
+            text-align: center;
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+
+        .m20 {
+            margin: 20px;
+        }
+
+        .debug {
+            outline: 2px dotted red
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="child">
+            <p>para la papa papá -> <a id="link" href="#"> papa</a></p>
+            <button id="boton">lala</button>
+            <input type="text" name="texto" id="texto">
+            <input type="checkbox" name="check" id="check">
+        </div>
+    </div>
+</body>
+<script>
+
+    const eventLoco = new CustomEvent('listo', {})
+
+
+
+    //****debouncing
+    let debounce = null;
+    texto.addEventListener('keydown', (e) => {
+        if (!debounce) {
+            //console.log('keydoy debunced', e);
+            setTimeout(() => {
+                //console.log('keydoy debunced', debounce);
+                //console.log('keydoy debunced', e);
+                debounce = null;
+            }, 1000);
+        }
+
+        debounce = e;
+    });
+
+</script>
+
+</html>

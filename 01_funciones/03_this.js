@@ -1,6 +1,6 @@
 /* quien es this? */
 
-function diceHola(){
+function diceHola() {
     console.log("Hola soy " + this.name)
 }
 
@@ -8,8 +8,8 @@ function diceHola(){
 //this.name = "pepe";
 
 let obj = {
-    name:"juan",
-    apellido:this.name,
+    name: "juan",
+    apellido: this.name,
     habla: diceHola
 
 }
@@ -17,10 +17,10 @@ let obj = {
 obj.habla()
 console.log(obj.apellido)
 
-let otro={
-    name:"soy otro",
-    queDigo:null,
-    apellido:this.name
+let otro = {
+    name: "soy otro",
+    queDigo: null,
+    apellido: this.name
 }
 
 otro.queDigo = diceHola
@@ -30,22 +30,22 @@ otro.queDigo()
 
 otro.queDigo = diceHola.bind(this)
 
-otro.queDigo = diceHola.bind({name:"lalala"})
+otro.queDigo = diceHola.bind({ name: "lalala" })
 
 
-diceHola.call({name:"sy call"})
+diceHola.call({ name: "sy call" })
 
 
-let x={
-    "0":"0",
-    "1":"1",
-    "2":"2"
+let x = {
+    "0": "0",
+    "1": "1",
+    "2": "2"
 }
 
-let arr = [1,2,3].map(x=>console.log(x))
+let arr = [1, 2, 3].map(x => console.log(x))
 
-mapa = Array.prototype.map.bind(x)
+let mapa = Array.prototype.map.bind(x)
 
-mapa(x=>console.log(x))
+mapa(x => console.log(x))
 
 

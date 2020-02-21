@@ -3,11 +3,11 @@
  * function a(){..} 
  */
 
-//a()
-function a(){
-    console.log("muy facil")
-} 
 a()
+function a() {
+    console.log("muy facil")
+}
+//a()
 
 /*-----------------------------------------------------------*/
 /**
@@ -16,7 +16,7 @@ a()
  *  */
 
 let f
-f = function (){
+f = function () {
     console.log("y esto como se llama")
 }
 
@@ -29,12 +29,12 @@ f()
  * pepe(function(){..})
  *  */
 
-function pepe (fn){
+function pepe(fn) {
     console.log(fn.name)
     fn()
 }
 
-pepe(function callb(){ console.log("soy un callback")})   //?
+pepe(function callb() { console.log("soy un callback") })   //?
 
 
 /*-----------------------------------------------------------*/
@@ -45,7 +45,7 @@ pepe(function callb(){ console.log("soy un callback")})   //?
  */
 
 let objeto = {
-    pepe:function(){console.log("soy un metodo")}
+    pepe: function () { console.log("soy un metodo") }
 }
 
 objeto.pepe()
@@ -56,7 +56,7 @@ objeto.pepe()
  * new Function(“a”,””)
  */
 
-let newF= new Function('a','console.log("mira mami sali de un string")')
+let newF = new Function('a', 'console.log("mira mami sali de un string")')
 
 newF()
 
@@ -65,7 +65,7 @@ newF()
  * Arrow Function
  *   ()=>
  *  */
-let arrow = a=>console.log("=>",a)
+let arrow = a => console.log("=>", a)
 arrow()
 
 
@@ -77,13 +77,13 @@ arrow()
  *  } 
  */
 
-function ret(){
-    return function(){
-                    console.log("()()")
-                    }
+function ret() {
+    return function () {
+        console.log("()()")
+    }
 }
 
-let retF= ret()
+let retF = ret()
 
 retF()
 ret()()
@@ -99,7 +99,7 @@ ret()()
  */
 
 
-function countDown(number){
+function countDown(number) {
     if (number <= 0) {
         console.log("hey llegamos a 0")
     } else {

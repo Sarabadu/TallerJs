@@ -3,17 +3,19 @@
  * 
  */
 
-o = Object.create(Object.prototype, 
-    {
+
+let o = Object.create(Object.prototype,
+  {
     // foo es un habitual "propiedad de valor"
-    foo: { writable:true, configurable:true, value: "hello" },
+    foo: { writable: true, configurable: true, value: "hello" },
     // bar es una propiedad getter-and-setter (de acceso)
     bar: {
       configurable: false,
-      get: function() { return 10 },
-      set: function(value) { console.log("Setting `o.bar` to", value) }
-  }});
+      get: function () { return 10 },
+      set: function (value) { console.log("Setting `o.bar` to", value) }
+    }
+  });
 
-  obj = {}
+let obj = {}
 
-delete  o.bar
+delete o.bar

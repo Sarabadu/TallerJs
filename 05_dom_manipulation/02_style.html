@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .highlight {
+            color: white;
+            background-color: black;
+            padding: 10px;
+            width: 250px;
+            text-align: center;
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+
+        .m20 {
+            margin: 20px;
+        }
+
+        .debug {
+            outline: 2px dotted red
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="highlight">
+        <p>para la papa papá -> <a href="#"> papa</a></p>
+    </section>
+</body>
+<script>
+    const sect = document.querySelector('section');
+
+    sect.classList.add("m20")
+
+    if (sect.classList.contains("highlight")) {
+        const para = document.querySelector('p');
+        para.classList.add("debug")
+    }
+</script>
+
+</html>
