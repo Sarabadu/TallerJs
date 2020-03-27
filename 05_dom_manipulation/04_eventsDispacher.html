@@ -36,30 +36,71 @@
             <p>para la papa papá -> <a id="link" href="#"> papa</a></p>
             <button id="boton">lala</button>
             <input type="text" name="texto" id="texto">
-            <input type="checkbox" name="check" id="check">
+            <input type="checkbox" name="check" id="check" onclick="console.log('evento check')">
         </div>
     </div>
 </body>
 <script>
 
-    const eventLoco = new CustomEvent('listo', {})
+    // seteamos un event
+    const boton = document.getElementById("boton");
+    boton.addEventListener('click', (e) => console.log("evento click", e));
+
+
+    // // Podemos crear un Evento y "lanzarlo" sobre un elemento    
+    // let evento = new Event("click");
+    // boton.dispatchEvent(evento);
+
+
+    // // de echo podemos usar un evento especifico:
+    // let evento2 = new MouseEvent("click");
+    // boton.dispatchEvent(evento2);
+
+    // evento2 = new MouseEvent("click", { screenX: 10, screenY: 10 });
+    // boton.dispatchEvent(evento2);
+
+
+    // // event.isTrusted nos deja ver si el evento se lanzo 
+
+
+    // // si el evento se captura desde el html tambiel lo va a detectar:
+    // const check = document.getElementById("check");
+    // let e3 = new Event("click");
+    // check.dispatchEvent(e3);
+
+    // const container = document.getElementById('container')
+    // const texto = document.getElementById('texto');
+    // container.addEventListener('click', (e) => console.log("evento click container", e));
+    // texto.addEventListener('click', (e) => console.log("evento click texto", e));
+
+    // let e4 = new Event("click");
+    // texto.dispatchEvent(e4);
+
+
+    // // Por defecto no se propaga, pero podemos permitirlo agregando la configuracion "bubbles"
+    // let e5 = new Event("click", { bubbles: true });
+    // texto.dispatchEvent(e5);
 
 
 
-    //****debouncing
-    let debounce = null;
-    texto.addEventListener('keydown', (e) => {
-        if (!debounce) {
-            //console.log('keydoy debunced', e);
-            setTimeout(() => {
-                //console.log('keydoy debunced', debounce);
-                //console.log('keydoy debunced', e);
-                debounce = null;
-            }, 1000);
-        }
 
-        debounce = e;
-    });
+    // Sincronia de eventos
+
+    // link.addEventListener('click', function (a) {
+    //     console.log(1)
+
+    //     let evnt = new Event('lalala');
+    //     link.dispatchEvent(evnt);
+
+    //     console.log(2)
+    // })
+
+    // link.addEventListener('lalala', function (a) {
+    //     console.log(3)
+    // })
+
+
+
 
 </script>
 

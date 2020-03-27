@@ -4,21 +4,21 @@
  * https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/create
  */
 
-let metodoCliente={
-    saludar :function saludar(){
-        return "Hola soy " + this.nombre+ ", " + this.apellido ;
+let metodoCliente = {
+    saludar: function saludar() {
+        return "Hola soy " + this.nombre + ", " + this.apellido;
     },
-    despedir: function despedir(){
-        return "Chau " + this.nombre+ ", " + this.apellido
+    despedir: function despedir() {
+        return "Chau " + this.nombre + ", " + this.apellido
     }
 }
 
 
-function creaCliente(nombre,apellido){
+function creaCliente(nombre, apellido) {
     let cliente = Object.create(metodoCliente)
-    cliente.nombre=nombre;
-    cliente.apellido=apellido;   
-    cliente.longitudNombre=nombre.length;
+    cliente.nombre = nombre;
+    cliente.apellido = apellido;
+    cliente.longitudNombre = nombre.length;
     return cliente;
 }
 /*

@@ -1,16 +1,16 @@
 const request = require('request');
 
-function ajax(url){
-    return new Promise(function (resolve,reject) {
-        request(url,{ json: true },function (err,res,body) {
-            if (err) {reject(err)}
-            else {resolve(body)}
+function ajax(url) {
+    return new Promise(function (resolve, reject) {
+        request(url, { json: true }, function (err, res, body) {
+            if (err) { reject(err) }
+            else { resolve(body) }
         })
-        
+
     })
 
 }
- 
+
 url = "https://jsonplaceholder.typicode.com/posts"
 urlErr = "https://aaaajsonplaceholder.typicode.com/posts"
 
@@ -22,5 +22,8 @@ urlErr = "https://aaaajsonplaceholder.typicode.com/posts"
  * 
  * codear debajo de este comentario
  *  */
+
+ajax(urlErr).then((res) => console.log("La respuesta es esta:" + res), (res2) => { throw new Error(" ss") })
+    .catch((err) => console.log("Este es un error", err));
 
 

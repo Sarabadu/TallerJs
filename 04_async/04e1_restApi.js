@@ -1,12 +1,12 @@
 const request = require('request');
 
-function ajax(url,cb){
-    request(url,{ json: true },function (err,res,body) {
-        cb(err,body)
+function ajax(url, cb) {
+    request(url, { json: true }, function (err, res, body) {
+        cb(err, body)
     })
 
 }
- 
+
 url = "https://jsonplaceholder.typicode.com/posts"
 urlErr = "https://aaaajsonplaceholder.typicode.com/posts"
 
@@ -19,4 +19,13 @@ urlErr = "https://aaaajsonplaceholder.typicode.com/posts"
  * codear debajo de este comentario
  *  */
 
+function callback(err, data) {
+    if (err) {
+        console.log("Error", err);
+        return;
+    }
 
+    console.log(data);
+}
+
+ajax(urlErr, callback);

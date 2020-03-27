@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .highlight {
+            color: white;
+            background-color: black;
+            padding: 10px;
+            width: 250px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <!-- Quien es pepe ?  -->
+        <pepe>
+            Hola soy pepe,
+            tu elemento amigo
+        </pepe>
+
+        <br />
+
+        <!-- <soy-pepe>
+            Hola soy pepe,
+            tu elemento amigo
+        </soy-pepe> -->
+
+        <!-- <br />
+        <soy-pepe-button>
+            hola
+        </soy-pepe-button> -->
+
+
+        <br />
+        <button id="pepe-btn" is="soy-pepe-button">
+            hola
+        </button>
+    </div>
+</body>
+<script>
+
+    /////***  Specs : https://html.spec.whatwg.org/multipage/custom-elements.html
+
+
+
+    class Pepe extends HTMLElement {
+        constructor() {
+            super();     //<-- super importante llamar al super; ;)
+
+        }
+    }
+
+    //customElements.define("soy-pepe", Pepe)
+
+
+
+    /// **** *  Extender De un elemento particular
+    // class PepeButton extends HTMLButtonElement {
+    //     constructor() {
+    //         super();     //<-- super importante llamar al super; ;)
+    //         this.propiedadCustom = "muajaja"
+    //     }
+    // }
+
+    //customElements.define("soy-pepe-button", PepeButton)
+
+
+    // customElements.define("soy-pepe-button", PepeButton, { extends: "button" })
+
+    // let pepe = document.getElementById("pepe-btn");
+    // pepe.addEventListener("click", (e) => console.log(e, e.target.propiedadCustom))
+
+
+    // si queremos crear un boton de pepe:
+
+    // const pepeBtn = document.createElement("button", { is: "soy-pepe-button" });
+    // pepeBtn.textContent = "Boton agregado dinamicamente";
+
+    // container.appendChild(pepeBtn);
+
+</script>
+
+</html>

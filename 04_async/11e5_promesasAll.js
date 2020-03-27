@@ -1,17 +1,17 @@
 const request = require('request');
 
-function ajax(url){
-    return new Promise(function (resolve,reject) {
-        request(url,{ json: true },function (err,res,body) {
-            if (err) {reject(err)}
-            else {resolve(body)}
+function ajax(url) {
+    return new Promise(function (resolve, reject) {
+        request(url, { json: true }, function (err, res, body) {
+            if (err) { reject(err) }
+            else { resolve(body) }
         })
-        
+
     })
 
 }
- 
-todos= "https://jsonplaceholder.typicode.com/users/{clie}/todos"
+
+todos = "https://jsonplaceholder.typicode.com/users/{clie}/todos"
 posts = "https://jsonplaceholder.typicode.com/users/{clie}/posts"
 cliente = "https://jsonplaceholder.typicode.com/users/{clie}"
 
@@ -24,5 +24,9 @@ cliente = "https://jsonplaceholder.typicode.com/users/{clie}"
  * codear debajo de este comentario
  * 
  *  */
+Promise.all([
+    ajax("https://jsonplaceholder.typicode.com/users/1/todos"),
+    ajax("https://jsonplaceholder.typicode.com/users/1/posts"),
+    ajax("https://jsonplaceholder.typicode.com/users/1")
+]).then(([a, b, c]) => console.log(a, b, c));
 
- 

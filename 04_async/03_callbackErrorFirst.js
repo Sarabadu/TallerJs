@@ -4,21 +4,21 @@
  */
 
 
-function teEspero(val,fn){
-    if (val == 1){
-        fn("No me gusta el 1",null) // Ups!!! aca estamos dejandouna funcion syncronica cuando  hay errores exigimos reparacion
+function teEspero(val, fn) {
+    if (val == 1) {
+        setTimeout(() => fn("No me gusta el 1", null), 0) // Ups!!! aca estamos dejandouna funcion syncronica cuando  hay errores exigimos reparacion
         return;
     }
-    setTimeout(()=>{
-        fn(null,"Datos datos datos")
+    setTimeout(() => {
+        fn(null, "Datos datos datos")
     }, 1000);
     return;
 }
 
 
-function callback(err,data){
-    if(err){
-        console.log("error",err)
+function callback(err, data) {
+    if (err) {
+        console.log("error", err)
         return;
     }
     console.log("tengo datos", data)

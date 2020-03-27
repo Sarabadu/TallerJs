@@ -2,12 +2,18 @@
  * Declaracion de funcion
  * function a(){..} 
  */
-
+/*
 a()
+
 function a() {
     console.log("muy facil")
+
 }
-//a()
+a()
+
+
+*/
+
 
 /*-----------------------------------------------------------*/
 /**
@@ -15,7 +21,10 @@ function a() {
  * let f = function d(){..}
  *  */
 
+/*
+
 let f
+
 f = function () {
     console.log("y esto como se llama")
 }
@@ -23,32 +32,44 @@ f = function () {
 f()
 //d()
 
+
+
 /*-----------------------------------------------------------*/
 /**
  * Funcion como Parametro
  * pepe(function(){..})
  *  */
 
+
 function pepe(fn) {
     console.log(fn.name)
-    fn()
+    fn(elm)
 }
 
-pepe(function callb() { console.log("soy un callback") })   //?
+function callb() { console.log("soy un callback") }
+
+pepe(callb)   //?
+
+
 
 
 /*-----------------------------------------------------------*/
 /**
  *  Funcion como metodo de objeto
- * {pepe:function(){..}} 
- * 
+ * {pepe:function(){..}}
+ *
  */
 
+
+/*
 let objeto = {
     pepe: function () { console.log("soy un metodo") }
 }
 
 objeto.pepe()
+
+*/
+
 
 /*-----------------------------------------------------------*/
 /**
@@ -56,17 +77,25 @@ objeto.pepe()
  * new Function(“a”,””)
  */
 
-let newF = new Function('a', 'console.log("mira mami sali de un string")')
 
-newF()
+/*
+let newF = new Function('a ,b ', 'console.log("mira mami sali de un string" + a + b)')
+
+newF("yo soy a", "yo soy b")
+*/
 
 /*-----------------------------------------------------------*/
 /**
  * Arrow Function
  *   ()=>
  *  */
-let arrow = a => console.log("=>", a)
-arrow()
+/*
+let arrow = a => {
+    console.log("hola");
+    return "a"
+}
+console.log(arrow("a"))
+
 
 
 /*-----------------------------------------------------------*/
@@ -74,8 +103,10 @@ arrow()
  * Funcion como retorno de otra funcion
  * function a(){
  *     return function(){}
- *  } 
+ *  }
  */
+
+/*
 
 function ret() {
     return function () {
@@ -86,8 +117,11 @@ function ret() {
 let retF = ret()
 
 retF()
+
 ret()()
 
+
+*/
 
 /*-----------------------------------------------------------*/
 /**
@@ -95,8 +129,9 @@ ret()()
  * function a(){
  *     a()
  *     return ;
- *  } 
+ *  }
  */
+
 
 
 function countDown(number) {
@@ -107,3 +142,4 @@ function countDown(number) {
         countDown(number - 1);
     }
 }
+countDown(-5)

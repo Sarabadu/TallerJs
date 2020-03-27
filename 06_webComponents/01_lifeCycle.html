@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .highlight {
+            color: white;
+            background-color: black;
+            padding: 10px;
+            width: 250px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <!-- <soy-pepe>
+            Hola soy pepe,
+            tu elemento amigo
+        </soy-pepe> -->
+
+    </div>
+
+    <iframe id="iframe" src='' frameborder="1">
+
+    </iframe>
+</body>
+<script>
+
+    /////***  Specs : https://html.spec.whatwg.org/multipage/custom-elements.html
+
+
+    class MyElemento extends HTMLElement {
+        constructor() {
+            // always call super() first
+            super();
+            console.log('Creado!');
+        }
+
+        connectedCallback() {
+            console.log('hey estoy en el dom');
+        }
+
+        disconnectedCallback() {
+            console.log('me fui del dom');
+        }
+
+        attributeChangedCallback(name, oldVal, newVal) {
+            console.log(`cambio el atributo ${name} tenia ${oldVal} pero ahora tiene ${newVal}`);
+        }
+
+
+        static get observedAttributes() {
+            return ['atributo'];
+        }
+
+
+        adoptedCallback() {
+            console.log('Ya existia en el dom! pero me pasaron a un nuevo documento');
+        }
+
+    }
+
+    customElements.define('mi-elemento', MyElemento);
+
+
+    let miElemento = document.createElement("mi-elemento")
+
+
+
+    container.appendChild(miElemento)
+
+
+
+    //container.removeChild(miElemento)
+
+    //desde consola probar 
+    ////// document.body.appendChild(parent.document.getElementsByTagName("mi-elemento")[0])
+
+</script>
+
+</html>

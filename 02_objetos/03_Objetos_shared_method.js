@@ -4,30 +4,31 @@
  *  y nos quedan agrupadas en un objeto 
  * */
 
-let metodoCliente={
-    saludar :function saludar(){
-        return "Hola soy " + this.nombre+ ", " + this.apellido ;
+let metodoCliente = {
+    saludar: function saludar() {
+        return "Hola soy " + this.nombre + ", " + this.apellido;
     },
-    despedir: function despedir(){
-        return "Chau " + this.nombre+ ", " + this.apellido
+    despedir: function despedir() {
+        return "Chau " + this.nombre + ", " + this.apellido
     }
 }
 
 
-function creaCliente(nombre,apellido){
-    let cliente = 
+function creaCliente(nombre, apellido) {
+    let cliente =
     {
-        nombre:nombre,
-        apellido:apellido,   
+        nombre: nombre,
+        apellido: apellido,
     }
-    cliente.despedir=metodoCliente.despedir,
-    cliente.longitudNombre=nombre.length
-    cliente.saludar=  metodoCliente.saludar;
+    cliente.despedir = metodoCliente.despedir,
+        cliente.longitudNombre = nombre.length
+    cliente.saludar = metodoCliente.saludar;
     return cliente;
 }
 
 let cliente = creaCliente("maxi", "meza")
 console.log(cliente.saludar(), cliente.longitudNombre)
+
 cliente = creaCliente("maxi1", "meza")
 console.log(cliente.despedir(), cliente.longitudNombre)
 

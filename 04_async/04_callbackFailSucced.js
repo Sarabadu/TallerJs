@@ -4,30 +4,30 @@
  */
 
 
-function teEspero(val,okFn,errFn){
-    if (val == 1){
+function teEspero(val, okFn, errFn) {
+    if (val == 1) {
         errFn("No me gusta el 1") // Ups!!!  i did it again
         return;
     }
-    setTimeout(()=>{
+    setTimeout(() => {
         okFn("Datos datos datos")
     }, 1000);
     return;
 }
 
 
-function ok(data){
+function ok(data) {
     console.log("tengo datos", data)
     return;
 }
 function error(err) {
-        console.log("error",err)
-        return;
+    console.log("error", err)
+    return;
 
 }
 
 console.log("1")
-teEspero(2, ok,error)
+teEspero(1, ok, error)
 console.log("2")
 
 

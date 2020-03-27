@@ -5,26 +5,29 @@
  * 
  */
 
-function creaCliente(nombre,apellido){
+function creaCliente(nombre, apellido) {
     let cliente = Object.create(creaCliente.prototype)
-    cliente.nombre=nombre;
-    cliente.apellido=apellido;   
-    cliente.longitudNombre=nombre.length;
+    cliente.nico = "alto alto"
+    cliente.nombre = nombre;
+    cliente.apellido = apellido;
+    cliente.longitudNombre = nombre.length;
     return cliente;
 }
 console.log(creaCliente.name)
 
-creaCliente.prototype.saludar =function saludar(){
-    return "Hola soy " + this.nombre+ ", " + this.apellido ;
+creaCliente.prototype.saludar = function saludar() {
+    return "Hola soy " + this.nombre + ", " + this.nico;
 };
-creaCliente.prototype.despedir= function despedir(){
-    return "Chau " + this.nombre+ ", " + this.apellido
+creaCliente.prototype.despedir = function despedir() {
+    return "Chau " + this.nombre + ", " + this.apellido
 }
- 
+creaCliente.prototype.nico = "cortito"
+
 console.log(creaCliente.prototype)
 
 let cliente = creaCliente("maxi", "meza")
 console.log(cliente.saludar(), cliente.longitudNombre)
+console.log(cliente.nico)
 cliente = creaCliente("maxi1", "meza")
 console.log(cliente.despedir(), cliente.longitudNombre)
 

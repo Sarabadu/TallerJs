@@ -1,4 +1,4 @@
-function *gen(){
+function* gen() {
     console.log("empezo el generador")
     yield 1
     console.log("holaaa")
@@ -7,16 +7,16 @@ function *gen(){
     console.log("chauuu")
     return 4
 
-} 
+}
 
 iterador = gen()
 
 console.log("0")
 
-console.log("1",iterador.next())
+console.log("1", iterador.next())
 
-console.log("2",iterador.next())
+console.log("2", iterador.next())
 
-console.log("3",iterador.next())
+console.log("3", iterador.return("a"))
 
-console.log("4",iterador.next())
+console.log("4", iterador.next("aaa"))

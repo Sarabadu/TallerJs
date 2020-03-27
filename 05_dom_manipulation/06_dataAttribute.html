@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .highlight {
+            color: white;
+            background-color: black;
+            padding: 10px;
+            width: 250px;
+            text-align: center;
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+
+        .m20 {
+            margin: 20px;
+        }
+
+        .debug {
+            outline: 2px dotted red
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <ul id="list">
+            <li><button class="botones">1</button></li>
+            <li><button class="botones">2</button></li>
+            <li><button class="botones">3</button></li>
+            <li><button class="botones">4</button></li>
+            <li><button class="botones">5</button></li>
+
+            <!-- <li><button class="botones" data-name="el-primero">1</button></li>
+            <li><button class="botones" data-name="el-segundo">2</button></li>
+            <li><button class="botones" data-name="el-tercero">3</button></li>
+            <li><button class="botones" data-name="el-cuarto">4</button></li>
+            <li><button class="botones" data-name="el-quinto">5</button></li> -->
+
+            <!-- <li><button class="botones" data-item="el-primero" data-user="el-primero">1</button></li>
+            <li><button class="botones" data-item="el-segundo" data-user="el-segundo">2</button></li>
+            <li><button class="botones" data-item="el-tercero" data-user="el-tercero">3</button></li>
+            <li><button class="botones" data-item="el-cuarto" data-user="el-cuarto">4</button></li>
+            <li><button class="botones" data-item="el-quinto" data-user="el-quinto">5</button></li> -->
+        </ul>
+
+        <p>
+            El ultimo botonito en apretarse fue:
+            <span id="lastPressed"></span>
+        </p>
+    </div>
+</body>
+<script>
+
+    // seteamos un event
+    const botones = document.getElementsByClassName("botones");
+
+
+    const lastPressed = document.getElementById('lastPressed')
+
+    for (const boton of botones) {
+
+        boton.addEventListener("click", (e) => { lastPressed.innerText += ",?" })
+    }
+
+
+
+    // for (const boton of botones) {
+
+    //     boton.addEventListener("click", (e) => { console.log(e.target.dataset); })
+    // }
+
+
+</script>
+
+</html>

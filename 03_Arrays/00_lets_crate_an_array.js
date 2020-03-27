@@ -7,13 +7,14 @@ console.log("a:", a)
 let b = new Array(5, 6, 7)
 console.log("b:", b)
 
+
 let c = new Array("5")
 console.log("c:", c)
 
 let d = new Array(5)
 console.log("d:", d)
 
-let d2 = new Array(5).fill(1)
+let d2 = new Array(7).fill(1, 2, -1)
 console.log("d2:", d2)
 
 
@@ -24,7 +25,7 @@ let f = Array.of(5, 6, 7)
 console.log("f:", f)
 
 
-let g = [...Array(5)]
+let g = [...Array(2).fill(2), ...Array(3).fill(1)]
 console.log("g:", g)
 
 
