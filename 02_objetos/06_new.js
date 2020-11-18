@@ -9,7 +9,7 @@ function Cliente(nombre, apellido) {
     this.nombre = nombre;
     this.apellido = apellido;
     this.longitudNombre = nombre.length;
-
+    //return this
 }
 
 

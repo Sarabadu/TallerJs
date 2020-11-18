@@ -41,6 +41,8 @@ function obtenerMovimiento(mov) {
     })
 }
 
+
+
 function* gen() {
     let a = yield obtenerCliente(11)
     let b = yield obtenerCuenta(a.cuenta)

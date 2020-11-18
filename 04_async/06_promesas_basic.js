@@ -4,46 +4,53 @@
  *  */
 
 let pedido = new Promise(function (resolver, rechazar) {
+    //console.log("ejecutando promesa")
     resolver("aqui tiene su hamburgesa ")
 })
+
+//console.log("??")
 
 pedido.then(function (res) {
     console.log("Señor Sanchez", res)
     return 1;
-}
-).then(function (dato) {
-    console.log("el dato es ", dato)
 })
+// .then(function (dato) {
+//     console.log("el dato es ", dato)
+// })
+
+
+/*****************************************************************************/
+// let prom2 = Promise.resolve("arranco resuelta, pero sigo siendo una promesa")
+
+// console.log("promesa resuelta", prom2)
 
 
 
-let prom2 = Promise.resolve("arranco resuelta, pero sigo siendo una promesa")
 
-console.log("promesa resuelta", prom2)
+/*****************************************************************************/
+// let pedido = new Promise(  function (resolver,rechazar){rechazar("nos quedamos sin mayonesa")})
 
-/*
-let pedido = new Promise(  function (resolver,rechazar){rechazar("nos quedamos sin mayonesa")})
-*/
-function ok(res) {
-    console.log("Señor Sanchez 1", res)
-}
-function ko(err) {
-    console.log("Error en el pedido 1: ", err)
-}
+/*****************************************************************************/
+// function ok(res) {
+//     console.log("Señor Sanchez 1", res)
+// }
+// function ko(err) {
+//     console.log("Error en el pedido 1: ", err)
+// }
 
-pedido.then(ok, ko)
-
-/*
-pedido.then(function (res) {
-    console.log("Señor Sanchez 2",res)
-},function (err) {
-    console.log("Error en el pedido 2: ",err)
-})
-*/
+// pedido.then(ok, ko)
 
 
-let prom2 = Promise.reject("arranco resuelta, pero sigo siendo una promesa")
+// pedido.then(function (res) {
+//     console.log("Señor Sanchez 2",res)
+// },function (err) {
+//     console.log("Error en el pedido 2: ",err)
+// })
 
-console.log("promesa resuelta", prom2)
+
+/*****************************************************************************/
+// let prom2 = Promise.reject("arranco resuelta, pero sigo siendo una promesa")
+
+// console.log("promesa resuelta", prom2)
 
 

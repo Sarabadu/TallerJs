@@ -21,6 +21,8 @@ function creaCliente(nombre, apellido) {
     cliente.longitudNombre = nombre.length;
     return cliente;
 }
+
+
 /*
 creaCliente.metodos= {
     saludar :function saludar(){

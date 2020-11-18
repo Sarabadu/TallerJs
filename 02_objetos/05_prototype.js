@@ -15,6 +15,9 @@ function creaCliente(nombre, apellido) {
 }
 console.log(creaCliente.name)
 
+
+
+
 creaCliente.prototype.saludar = function saludar() {
     return "Hola soy " + this.nombre + ", " + this.nico;
 };
@@ -24,6 +27,17 @@ creaCliente.prototype.despedir = function despedir() {
 creaCliente.prototype.nico = "cortito"
 
 console.log(creaCliente.prototype)
+
+
+
+
+
+
+
+
+
+
+
 
 let cliente = creaCliente("maxi", "meza")
 console.log(cliente.saludar(), cliente.longitudNombre)

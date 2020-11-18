@@ -2,7 +2,7 @@
  * Declaracion de funcion
  * function a(){..} 
  */
-/*
+
 a()
 
 function a() {
@@ -12,7 +12,7 @@ function a() {
 a()
 
 
-*/
+
 
 
 /*-----------------------------------------------------------*/
@@ -21,15 +21,15 @@ a()
  * let f = function d(){..}
  *  */
 
-/*
 
-let f
 
-f = function () {
-    console.log("y esto como se llama")
-}
+// let f
 
-f()
+// f = function () {
+//     console.log("y esto como se llama")
+// }
+
+// f()
 //d()
 
 
@@ -41,14 +41,14 @@ f()
  *  */
 
 
-function pepe(fn) {
-    console.log(fn.name)
-    fn(elm)
-}
+// function pepe(fn) {
+//     console.log(fn.name)
+//     fn(elm)
+// }
 
-function callb() { console.log("soy un callback") }
+// function callb() { console.log("soy un callback") }
 
-pepe(callb)   //?
+// pepe(callb)   //?
 
 
 
@@ -61,14 +61,14 @@ pepe(callb)   //?
  */
 
 
-/*
-let objeto = {
-    pepe: function () { console.log("soy un metodo") }
-}
 
-objeto.pepe()
+// let objeto = {
+//     pepe: function () { console.log("soy un metodo") }
+// }
 
-*/
+// objeto.pepe()
+
+
 
 
 /*-----------------------------------------------------------*/
@@ -78,23 +78,23 @@ objeto.pepe()
  */
 
 
-/*
-let newF = new Function('a ,b ', 'console.log("mira mami sali de un string" + a + b)')
 
-newF("yo soy a", "yo soy b")
-*/
+// let newF = new Function('a ,b ', 'console.log("mira mami sali de un string" + a + b)')
+
+// newF("yo soy a", "yo soy b")
+
 
 /*-----------------------------------------------------------*/
 /**
  * Arrow Function
  *   ()=>
  *  */
-/*
-let arrow = a => {
-    console.log("hola");
-    return "a"
-}
-console.log(arrow("a"))
+
+// let arrow = a => {
+//     console.log("hola");
+//     return "a"
+// }
+// console.log(arrow("a"))
 
 
 
@@ -106,22 +106,22 @@ console.log(arrow("a"))
  *  }
  */
 
-/*
-
-function ret() {
-    return function () {
-        console.log("()()")
-    }
-}
-
-let retF = ret()
-
-retF()
-
-ret()()
 
 
-*/
+// function ret() {
+//     return function () {
+//         console.log("()()")
+//     }
+// }
+
+// let retF = ret()
+
+// retF()
+
+// ret()()
+
+
+
 
 /*-----------------------------------------------------------*/
 /**
@@ -134,12 +134,12 @@ ret()()
 
 
 
-function countDown(number) {
-    if (number <= 0) {
-        console.log("hey llegamos a 0")
-    } else {
-        console.log(number);
-        countDown(number - 1);
-    }
-}
-countDown(-5)
+// function countDown(number) {
+//     if (number <= 0) {
+//         console.log("hey llegamos a 0")
+//     } else {
+//         console.log(number);
+//         countDown(number - 1);
+//     }
+// }
+// countDown(-5)

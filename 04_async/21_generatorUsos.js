@@ -9,10 +9,13 @@ function *gen(){
 
 } 
 
-for (const iterator of gen()) {
-  console.log(iterator)    
-}
+/*****************************************************************************/
+// for (const iterator of gen()) {
+//   console.log(iterator)    
+// }
 
-let [a,b,c] = gen()
 
-console.log(a,b,c)
+/*****************************************************************************/
+// let [a,b,c] = gen()
+
+// console.log(a,b,c)

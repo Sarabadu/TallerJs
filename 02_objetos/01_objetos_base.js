@@ -15,8 +15,8 @@ let result = cliente.saludar() // "Hola soy ... , ..."
 
 console.log('result:', result);
 
-/*
-function saludar(){
-    return "Hola soy " + this.nombre + ", " + this.apellido ;
-}
-*/
+/*****************************************************************************/
+// function saludar(){
+//     return "Hola soy " + this.nombre + ", " + this.apellido ;
+// }
+

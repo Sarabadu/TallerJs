@@ -79,12 +79,15 @@ let impUltimoMovimiento = obtenerCliente(210)
         throw err
     })
 
-let resultado;
 
-impUltimoMovimiento.then(function (importe) {
-    console.log("importe: ", importe)
-    resultado = importe;
-}).catch(function (err) {
-    console.log("error final", err)
-})
+
+/*****************************************************************************/
+// let resultado;
+
+// impUltimoMovimiento.then(function (importe) {
+//     console.log("importe: ", importe)
+//     resultado = importe;
+// }).catch(function (err) {
+//     console.log("error final", err)
+// })
 
